@@ -25,11 +25,28 @@ public class Lab3P1_Joana_Hernandez {
         System.out.print("Que desea hacer? ");
         int respuesta = scanner.nextInt();
         
-       // do {
+     
              System.out.println("");
              switch (respuesta) {
                 case 1: 
-                     break;
+                     System.out.print("Ingrese un numero mayor o igual a 7: ");
+                     int num = scanner.nextInt();
+                     
+                     if (num>= 7) {
+                         
+                         for (int i = 1; i <= num; i++) {
+                           for (int j = 1; j <= num-i; j++) {
+                               System.out.print(" ");
+                           } 
+                           for (int x = 1; x<=(i*2)-1; x++) {
+                               System.out.print("*");
+                           } 
+                           System.out.println();
+                        } 
+                         
+                     }
+                     
+                    break;
                 
                  case 2: 
                      System.out.print("Ingrese un valor para n: ");
@@ -67,13 +84,20 @@ public class Lab3P1_Joana_Hernandez {
                     break;
                
                 case 3 :
-                    System.out.print("Ingrese un limite: ");
+                    System.out.print("Ingrese un limite impar mayor o igual a 7: ");
                     int limite = scanner.nextInt();
-                    System.out.print("Ingrese un numero mayor o igual a 7: ");
-                    int num = scanner.nextInt();
-                    
-                        if (num>= 7) {
-                            
+                   
+                        if (limite>= 7 && limite % 2 != 0) {
+                            for (int i = 0; i < limite; i++) {
+                             for (int j = 0; j < limite; j++) {
+                                 if (j == i) {
+                                   System.out.print("  ");
+                                 } else {
+                                     System.out.print(" * ");
+                                }
+                             }
+                                 System.out.println();
+                          }
                             
                         } else {
                             System.out.print("Numero invalido");
@@ -82,9 +106,11 @@ public class Lab3P1_Joana_Hernandez {
                     break;
                     
                 default: 
+                    System.out.print("El numero debe ser uno de las opciones");
                     break;
         }
-       // } while (respuesta != 4);
+        
+       
        // aqui termina
     } 
 }
