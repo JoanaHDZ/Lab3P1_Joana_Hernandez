@@ -19,7 +19,6 @@ public class Lab3P1_Joana_Hernandez {
         int respuesta;
         
         do {
-       
         System.out.println("------menu-----");
         System.out.println("1) reloj de arena");
         System.out.println("2) calculadora de combinaciones");
@@ -35,27 +34,28 @@ public class Lab3P1_Joana_Hernandez {
                      int a = scanner.nextInt();
                      
                       if (a>= 7) {
-                        for (int i = 0; i < a; i++) {
+                        for (int i = 0; i < a; i++) { // triangulo hacia abajo
                             for (int j = 0; j < i; j++) {
                                System.out.print(" ");
                             }
                             for (int j = 0; j < (a - i)*2 - 1; j++) {
                                     if (i == a - 1) {
                                      System.out.print(" ");
+                                    
                                     } else {
                                          System.out.print("*");
                                     }
-                            }
-                              System.out.println();
+                            } 
+                         System.out.println();
                        }
-                        for (int i = 1; i <= a;i++) {
+                        for (int i = 1; i <= a;i++) { // triangulo hacia arriba
                            for (int j = 1; j <= a-i; j++) {
                                System.out.print(" ");
                            } 
                            for (int x = 1; x<=(i*2)-1; x++) {
                                System.out.print("*");
                            } 
-                           System.out.println();
+                        System.out.println();
                         } 
                     } else {
                         System.out.println("Numero invalido");
@@ -120,7 +120,7 @@ public class Lab3P1_Joana_Hernandez {
                     break;
                     
                 default: 
-                    System.out.print("El numero debe ser uno de las opciones");
+                    System.out.print("");
                     break;
         }
              System.out.println();
