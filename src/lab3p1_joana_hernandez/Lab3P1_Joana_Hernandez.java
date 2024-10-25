@@ -46,17 +46,17 @@ public class Lab3P1_Joana_Hernandez {
                                          System.out.print("*");
                                     }
                             }
-                              System.out.println();
+                            System.out.println();
                        }
-                        for (int i = 1; i < a; i++) {
-                            for (int j = 0; j < a - i - 1; j++) {
+                        for (int i = 1; i <= a;i++) {
+                           for (int j = 1; j <= a-i; j++) {
                                System.out.print(" ");
-                        }
-                            for (int j = 0; j < (i * 2) + 1; j++) {
+                           } 
+                           for (int x = 1; x<=(i*2)-1; x++) {
                                System.out.print("*");
-                         }
-                              System.out.println();
-                        }
+                           } 
+                           System.out.println();
+                        } 
                     } else {
                         System.out.println("Numero invalido");
                     }  
