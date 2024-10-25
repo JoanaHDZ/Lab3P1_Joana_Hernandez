@@ -15,37 +15,51 @@ public class Lab3P1_Joana_Hernandez {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
         Scanner scanner = new Scanner(System.in);
+        int respuesta;
+        
+        do {
+       
         System.out.println("------menu-----");
         System.out.println("1) reloj de arena");
         System.out.println("2) calculadora de combinaciones");
         System.out.println("3) Sandwich");
         System.out.println("4) Salir");
         System.out.print("Que desea hacer? ");
-        int respuesta = scanner.nextInt();
+        respuesta = scanner.nextInt();
         
-     
              System.out.println("");
              switch (respuesta) {
                 case 1: 
                      System.out.print("Ingrese un numero mayor o igual a 7: ");
-                     int num = scanner.nextInt();
+                     int a = scanner.nextInt();
                      
-                     if (num>= 7) {
-                         
-                         for (int i = 1; i <= num; i++) {
-                           for (int j = 1; j <= num-i; j++) {
+                      if (a>= 7) {
+                        for (int i = 0; i < a; i++) {
+                            for (int j = 0; j < i; j++) {
                                System.out.print(" ");
-                           } 
-                           for (int x = 1; x<=(i*2)-1; x++) {
+                            }
+                            for (int j = 0; j < (a - i)*2 - 1; j++) {
+                                    if (i == a - 1) {
+                                     System.out.print(" ");
+                                    } else {
+                                         System.out.print("*");
+                                    }
+                            }
+                              System.out.println();
+                       }
+                        for (int i = 1; i < a; i++) {
+                            for (int j = 0; j < a - i - 1; j++) {
+                               System.out.print(" ");
+                        }
+                            for (int j = 0; j < (i * 2) + 1; j++) {
                                System.out.print("*");
-                           } 
-                           System.out.println();
-                        } 
-                         
-                     }
-                     
+                         }
+                              System.out.println();
+                        }
+                    } else {
+                        System.out.println("Numero invalido");
+                    }  
                     break;
                 
                  case 2: 
@@ -109,8 +123,8 @@ public class Lab3P1_Joana_Hernandez {
                     System.out.print("El numero debe ser uno de las opciones");
                     break;
         }
-        
-       
+             System.out.println();
+        } while (respuesta != 4);
        // aqui termina
     } 
 }
